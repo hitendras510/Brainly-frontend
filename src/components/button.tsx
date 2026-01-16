@@ -17,9 +17,9 @@ const VariantStyle = {
 };
 
 const sizeStyle = {
-  sm: "py-1 px-2",
-  md: "py-2 px-4",
-  lg: "py-4 px-6",
+  sm: "py-1 px-2 text-sm rounded-sm",
+  md: "py-2 px-4 text-md rounded-md",
+  lg: "py-4 px-6 text-lg rounded-lg m",
 };
 
 const defaultStyle = "rounded-md flex items-center gap-2";
@@ -32,10 +32,12 @@ export const Button = (props: ButtonProps) => {
         sizeStyle[props.size]
       }`}
     >
+        <div className="flex items-center">
       {props.startIcon && <span className="pr-2">{props.startIcon}</span>}
       {props.text}
       {props.endIcon && <span className="pl-2">{props.endIcon}</span>}
+      </div>
     </button>
   );
-};
+}; 
 ``;
